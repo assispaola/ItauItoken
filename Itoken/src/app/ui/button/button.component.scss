@@ -1,0 +1,18 @@
+.btn-orange {
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  color:#EC7000;
+  border: none;
+  width: 8rem;
+  height: 3rem;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: none;
+    background-color: #D6D0CC;
+    color: #A4A09D;
+  }
+}
+ 

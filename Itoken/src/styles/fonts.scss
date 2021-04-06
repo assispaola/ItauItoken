@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "itau_display_bold";
+    src: url("../assets/fonts/itaudisplay_bd-webfont.woff2") format("woff2"),
+      url("../assets/fonts/itaudisplay_bd-webfont.woff") format("woff");
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "itau_display_light";
+    src: url("../assets/fonts/itaudisplay_lt-webfont.woff2") format("woff2"),
+      url("../assets/fonts/itaudisplay_lt-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "itau_display";
+    src: url("../assets/fonts/itaudisplay_rg-webfont.woff2") format("woff2"),
+      url("../assets/fonts/itaudisplay_rg-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  $font-bold: "itau_display_bold";
+  $font-light: "itau_display_light";
+  $font-normal: "itau_display";
