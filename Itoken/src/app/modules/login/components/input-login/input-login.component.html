@@ -3,7 +3,7 @@
   <mat-form-field appearance="outline">
     <mat-label>funcional</mat-label>
     <input matInput type="text" formControlName="funcional"
-      [ngClass]="{ 'is-invalid': submitted && f.funcional.errors }" />
+      [ngClass]="{ 'is-invalid': submitted && f.funcional.errors }" [formControl]="registerForm.get('funcional')"/>
   </mat-form-field>
 
 
@@ -22,7 +22,7 @@
 
 
 <div class="btn-orange">
-  <button class="btn btn-secondary btn-lg btn-orange" type="submit" [disabled]="!registerForm.valid" >entrar</button>
+  <button class="btn btn-secondary btn-lg btn-orange" type="button" [disabled]="!registerForm.valid" >entrar</button>
 </div>
 
 </form>
