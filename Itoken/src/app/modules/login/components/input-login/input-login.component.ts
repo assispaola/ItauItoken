@@ -1,40 +1,29 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { FloatLabelType } from '@angular/material/form-field';
+import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-input-login',
   templateUrl: './input-login.component.html',
-  styleUrls: ['./input-login.component.scss']
+  styleUrls: ['./input-login.component.scss'],
 })
 export class InputLoginComponent implements OnInit {
- 
-  registerForm!: FormGroup;
-  submitted = false;
+  submitted: boolean;
+  public registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+    this.submitted = false;
 
-
-  ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       funcional: ['', Validators.required],
       racf: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-  });
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
   }
 
-    // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
-
-    onSubmit() {
-        this.submitted = true;
-
-        // stop here if form is invalid
-        if (this.registerForm.invalid) {
-            return;
-        }
-
-      }
-    }
-
-
+  ngOnInit(): void {}
+}

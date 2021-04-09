@@ -1,31 +1,32 @@
 <form action="" class="login-form">
-
   <mat-form-field appearance="outline">
     <mat-label>funcional</mat-label>
-    <input matInput type="text" formControlName="funcional"
-      [ngClass]="{ 'is-invalid': submitted && f.funcional.errors }" [formControl]="registerForm.get('funcional')"/>
+    <input matInput type="text" [formControl]="registerForm.get('funcional')" />
   </mat-form-field>
-
 
   <mat-form-field appearance="outline">
     <mat-label>racf</mat-label>
-    <input matInput type="text" formControlName="racf" [ngClass]="{ 'is-invalid': submitted && f.racf.errors }" />
+    <input matInput type="text" [formControl]="registerForm.get('racf')" />
   </mat-form-field>
-
 
   <mat-form-field appearance="outline">
     <mat-label>senha</mat-label>
-    <input matInput type="password" formControlName="password"
-      [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+    <input
+      matInput
+      type="password"
+      [formControl]="registerForm.get('password')"
+    />
   </mat-form-field>
 
-
-
-<div class="btn-orange">
-  <button class="btn btn-secondary btn-lg btn-orange" type="button" [disabled]="!registerForm.valid" >entrar</button>
-</div>
-
+  <div class="btn-orange">
+    <button
+      class="btn btn-secondary btn-lg btn-orange"
+      type="button"
+      [disabled]="!registerForm.valid"
+    >
+      entrar
+    </button>
+  </div>
 </form>
-
 
 <!-- End Form -->
